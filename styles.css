@@ -1,0 +1,122 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  padding: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* Logo styling */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 460px; /* Adjust size as needed */
+  height: auto; /* Keeps aspect ratio */
+  z-index: 1000;
+}
+
+.img1 {
+  position: absolute;
+  top: 140px;
+  left: 23%;
+  height: auto;
+  width: 800px;
+}
+
+/* Name boxes container */
+.name-boxes {
+  display: flex;
+  justify-content: center; /* Centers the boxes horizontally */
+  gap: 20px; /* Space between boxes */
+  margin: 20px 0;
+  margin-top: 550px;
+}
+
+/* Individual boxes */
+.box {
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1; /* Makes all boxes the same size */
+  max-width: 150px; /* Optional: Restrict the box size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+  background: linear-gradient(45deg, #8763ea, #c0a6f5); /* Gradient color change */
+  transform: scale(1.1); /* Slightly enlarges the box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow */
+  color: white; /* Changes text color to white */
+}
+
+.img2 {
+  position: absolute;
+  top: 700px;
+  left: 22%;
+  height: auto;
+  width: 850px;
+}
+
+.lastp{
+  position: absolute;
+  top: 1150px;
+  left: 22%;
+  width: 850px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.qrcode{
+  position: absolute;
+  top: 1300px;
+  left: 35%;
+  height: auto;
+  width: 450px;
+  padding-bottom: 30px;
+}
+
+/* Styles for smaller screens (e.g., mobile) */
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 90%; /* Adjust width for smaller screens */
+    top: 5px;
+    position: static;
+    margin: auto 200px;
+  }
+
+  .img1, .img2, .lastp, .qrcode {
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Make images scale to fit smaller screens */
+    margin: 20px auto; /* Center and space elements */
+  }
+
+  .name-boxes {
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 10px; /* Reduce spacing between boxes */
+    margin-top: 20px;
+  }
+
+  .box {
+    max-width: 100%; /* Allow full width for smaller screens */
+  }
+
+  .lastp {
+    font-size: 20px; /* Adjust font size for readability on smaller devices */
+  }
+}
